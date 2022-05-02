@@ -34,14 +34,15 @@ function findEvenIndex(arr) {
     for (
         // Starting values
         let i = 0,
-        start = arr.slice(0, i).reduce((e, i) => e + i, 0),
-        end = arr.slice(i + 1, arr.length).reduce((e, i) => e + i, 0);
+            start = arr.slice(0, i).reduce((e, i) => e + i, 0),
+            end = arr.slice(i + 1, arr.length).reduce((e, i) => e + i, 0);
         // Stop conditional
         i < arr.length;
         // Per step we do this
         i++,
-        start = arr.slice(0, i).reduce((e, i) => e + i, 0),
-        end = arr.slice(i + 1, arr.length).reduce((e, i) => e + i, 0)) {
+            start = arr.slice(0, i).reduce((e, i) => e + i, 0),
+            end = arr.slice(i + 1, arr.length).reduce((e, i) => e + i, 0)
+    ) {
         // If they are equal, return the index
         if (start === end) return i;
     }
