@@ -13,6 +13,6 @@
 // Check if we have a strln of 1 and return depth (default 0).
 // If not, return this func again, but num is now [tostring(num)] and multiply each digit to get new val. increment depth
 
-const persistence = (num, depth = 0) =>
-    `${num}`.length === 1 ? depth
-    : persistence(([...`${num}`]).reduce((total, el) => total * el), depth++);
+const persistence = (num, depth = 0) => `${num}`.length === 1 ? depth : persistence(([...`${num}`]).reduce((total, el) => total * el), depth+1);
+
+module.exports = persistence;
