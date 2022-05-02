@@ -10,7 +10,7 @@ function isPalindrome(x) {
      */
     // return [...x].reverse().join('') === x;
 
-    for (let start = 0, end = x.length - 1; start <= end; start++, end--)
+    for (let start = 0, end = x.length - 1; start < end; start++, end--)
       if (x[start].toLowerCase() !== x[end].toLowerCase()) return false
     return true
 }
